@@ -1,14 +1,16 @@
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
-  --accent-color: #2196f3;
+  --focus-color: #2196f3;
   --primary-white-color: #ffffff;
-  --primary-background-color: #f5f5f5;
+  --section-background-color: #f5f5f5;
 }
 .page {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 .list {
   list-style: none;
@@ -16,75 +18,139 @@
 .link {
   text-decoration: none;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /* logo */
 .logo {
-  color: var(--accent-color);
-  font-family: Raleway;
+  color: var(--focus-color);
+  font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
-  line-height: calc(31 / 26);
+  line-height: 1.19;
 }
 .logo-black {
   color: #000000;
 }
 .logo-white {
   color: var(--primary-white-color);
-  background-color: gray;
 }
 /* end Logo */
 /* header */
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: var(--accent-color);
+  color: var(--focus-color);
 }
 .contact .link {
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .contact .link:hover,
 .contact .link:focus {
-  color: var(--accent-color);
+  color: var(--focus-color);
 }
 /* end header */
 /* styles index.html */
+.section-hero {
+  background-color: #2f303a;
+}
+.hero-title {
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.button-primary {
+  color: var(--primary-white-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--focus-color);
+  cursor: pointer;
+}
+.preferences-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.preferences-text {
+  line-height: 1.71;
+}
+.work-header {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+.section-team {
+  background-color: #f5f4fa;
+}
+.team-header {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+}
+.team-item {
+  background-color: var(--primary-white-color);
+}
+.team-title {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.18;
+}
 /* end styles index.html */
 
 /* styles portfolio.html */
 /* end styles portfolio.html */
 
 /* footer */
-.list .address-link {
-  color: var(--primary-white-color);
-  background-color: gray;
+.footer {
+  background-color: #2f303a;
+}
+.list-address {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+}
+.address-link {
+  color: var(--primary-white-color);
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration: none;
 }
 .contact-link {
   color: var(--primary-text-color);
-  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 .contact-link:hover,
 .contact-link:focus {
-  color: var(--accent-color);
+  color: var(--focus-color);
 }
 /* end footer */
 
@@ -111,3 +177,33 @@
 «С16» Кнопкам задана властивість cursor зі значенням pointer. 
 «С17» У стилях не повторюються значення властивостей, які задані браузером за замовчуванням. Наприклад,
 посиланням не потрібно вказувати cursor: pointer, а абзацам font-style: normal або font-weight: 400. */
+
+/* Деякі з вас вже встигли здати 2 д/з і є можливість відстежити найпоширеніші помилки.
+Тому хочу звернути увагу тих, хто ще не здав роботу, на деякі нюанси, які слід зважити.
+Текстовий контент стилізуємо суворо Згідно з Макетом. У вас вже 2 сторінки студія та портфоліо та розмітка та стилі необхідні для обох. І звичайно верстаємо не на око, а ретельно звіряємо з макетом всі характеристики шрифтів: колір, розмір, жирність, висоту рядка, міжлітерний інтервал та інше. Не забуваймо, що браузер по дефолту стилізує деякі елементи, і ця стилізація візуально може бути дуже схожою на ту, що вам потрібна (наприклад, дефолту може застосовується правильний розмір шрифту або жирність). Але ми однаково ставимо ці стилі через css-правило.
+Не забувайте підсвічувати синім кольором посилання на сторінку, на якій знаходиться користувач (Олександр Репета у своєму вебінарі наводив приклад із класом current, зверніть на це увагу).
+Задайте колір фону елементам, для яких це потрібно. Наприклад секція наша команда фон попелястий, а фон карток білий.
+Подивитись колір фону для body можна ось тут https://i.goit.ua/3uHnEqo
+У нашому макеті на кнопці головної секції є стилі для стану hover/ focus, подивитись їх можна ось тут http://i.goit.global/styles__for__button
+Заголовки скрити можна за допомогою паттерну visually-hidden. Для цього таким заголовкам треба додати клас  visually-hidden та додати до файлу стилів ось таке правило
+.visually-hidden {
+  position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+Зверніть увагу, що колір другої частини логотипу в хедері та футері відрізняється.
+Курсива у футері бути не повинно (по дефолту для тега address браузер задає font-style: italic, вам цю властивість потрібно перебити).
+Не забуваймо про ховер/фокус для інтерактивних елементів. У футері його явно не видно, але на контактах можемо зробити також акцентний синій, щоб зберегти цілісний вигляд нашої сторінки.
+Шрифти підключаємо одним посиланням (а не двома окремими), не забуваємо вибирати необхідну жирність (для raleway - 700, для roboto - 400, 500, 700, 900). На макеті є ще Oleo Script, але фактично його не використовуємо.
+Перехід повинен працювати не лише зі сторінки «Студія» на сторінку «Портфоліо», а й навпаки.
+На сторінці з портфоліо кнопки-фільтри (використовуйте для них тег button) та картки портфоліо - це 2 списки, загорнуті в загальну секцію (2 окремі секції виділяти не потрібно).
+Всі кольори тексту та кольори фону виносимо у змінні. Навіть якщо колір поки що використовується один раз, не хвилюйтеся наш проект буде розростатися і їх будемо перевикористовувати, так що виносимо всі кольори в змінні.
+Коли прописуєте css правила для елементів, не пишіть зайвого. Наприклад, сімейство шрифтів roboto досить раз задати для body, а далі тільки перезаписувати цю властивість за потребою (зокрема, для логотипу). При цьому зверніть увагу, що елементи форми (вас цікавлять на даному етапі кнопки) властивість font-family не успадковують за замовчуванням, тобто для них потрібно задати явно -- font-family: inherit. Також ви часто для всіх елементів прописуєте font-style:normal, але це дефолтне значення. Задавайте цю властивість лише тоді, коли її потрібно перевизначити.
+Перед здачею роботи не забувайте пробігтися всіма пунктами і переконайтеся, що нічого не пропустили. Це не тільки полегшить роботу ментору, що забезпечить більш оперативну перевірку робіт, а й позбавить вас зайвих ресабмітів. Докладайте зусиль і будьте уважними - і тоді все буде чудово. Всіх обіймаю */
