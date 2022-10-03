@@ -195,4 +195,15 @@
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+.contact-link-footer {
+  color: var(--primary-text-color);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.contact-link-footer:hover,
+.contact-link-footer:focus {
+  color: var(--focus-color);
+}
+
 /* end footer */
